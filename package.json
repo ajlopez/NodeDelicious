@@ -1,0 +1,17 @@
+{ "name": "nodedelicious"
+, "description": "Library to access Delicious API"
+, "keywords": [ "delicious", "api" ]
+, "version": "0.0.1alpha"
+, "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
+, "repository": { "type": "git", "url": "git://github.com/ajlopez/NodeDelicious.git" }
+, "main": "./lib/nodedelicious.js"
+, "engines": { "node": ">= 0.6.0 && < 0.9.0" }
+, "scripts": {
+    "test": "node ./test.js"
+  }
+, "dependencies": {
+    "simpleboard": "*"
+  }
+, "devDependencies": {
+  }
+}
