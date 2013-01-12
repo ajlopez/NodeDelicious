@@ -31,11 +31,12 @@ npm test
 
 ## Samples
 
-TBD
+- [Get All](https://github.com/ajlopez/NodeDelicious/tree/master/samples/getall) Get all links of a tag, with
+optional date range.
 
 ## To do
 
-- Samples
+TBD
 
 ## Contribution
 
