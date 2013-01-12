@@ -11,6 +11,7 @@ npm install
 You must define the environment variables:
 - DELICIOUS_USER
 - DELICIOUS_PASSWORD
+
 with the values of your Delicious account.
 
 ## Run

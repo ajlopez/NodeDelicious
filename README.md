@@ -31,7 +31,7 @@ npm test
 
 ## Samples
 
-- [Get All](https://github.com/ajlopez/NodeDelicious/tree/master/samples/getall) Get all links of a tag, with
+- [Get All Links](https://github.com/ajlopez/NodeDelicious/tree/master/samples/getall): Get all links of a tag, with
 optional date range.
 
 ## To do
