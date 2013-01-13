@@ -19,7 +19,7 @@ exports['getAll nodejs from Dec 2012'] = function (test) {
 };
 
 exports['getAll nodejs 10 results'] = function (test) {
-    test.expect(5);
+    test.expect(15);
 
     simpledelicious.getAll('nodejs', { results: 10 }, function (err, data) {
         if (err) {
@@ -32,6 +32,11 @@ exports['getAll nodejs 10 results'] = function (test) {
         test.ok(data.posts.post);
         test.ok(Array.isArray(data.posts.post));
         test.equal(data.posts.post.length, 10);
+
+        data.posts.post.forEach(function (post) {
+            test.ok(post.$.tag.indexOf('nodejs') >=0);
+        });
+
         test.done();
     });
 };

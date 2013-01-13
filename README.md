@@ -92,6 +92,7 @@ TBD ;-)
 ## Versions
 
 0.0.1: Published, 2013-01-13, with getAll.
+0.0.2: In master, under development.
 
 ## Contribution
 
