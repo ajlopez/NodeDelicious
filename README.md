@@ -19,7 +19,15 @@ Reference in your program:
 var nodedelicious = require('nodedelicious');
 ```
 
-### Dates
+### Authentication
+
+The library uses these environment variables:
+- DELICIOUS_USER
+- DELICIOUS_PASSWORD
+
+You must set them with the values of your Delicious account.
+
+### Date Formats
 
 The date format is `YYYY-MM-DD`. You can specify a datestamp using the format `YYYY-MM-DDTHH:MM:SSZ`.
 Requires a LITERAL “T” and “Z” like in ISO8601 at 
@@ -27,6 +35,8 @@ http://www.cl.cam.ac.uk/~mgk25/iso—time.html for Example: "1984—09—01T14:21:31Z"
 
 If you specify a from date, no datestamp, it will expanded to `YYYY-MM-DDT00:00:00Z`. A to date will
 be expanded to `YYYY-MM-DDT23:59:59Z`.
+
+The library validates dates, before sending a request to the API endpoints.
 
 ### Get All Links
 
@@ -68,14 +78,6 @@ optional date range.
 ## API
 
 The library uses v1 Delicious API described at [Developing for Delicious](https://delicious.com/developers). 
-
-## Authentication
-
-The library uses these environment variables:
-- DELICIOUS_USER
-- DELICIOUS_PASSWORD
-
-You must set them with the values of your Delicious account.
 
 ## Inception
 
