@@ -89,6 +89,10 @@ Apparently, the only way to have date range is using API v1: Delicious feeds doe
 
 TBD ;-)
 
+## Versions
+
+0.0.1: Published, 2013-01-13, with getAll.
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/NodeDelicious) and submit
