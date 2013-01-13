@@ -18,11 +18,21 @@ with the values of your Delicious account.
 
 With the command line:
 ```
-node run <tag> [-f|--from <date>] [-t|--to <date>]
+node run <tag> [-f|--from <date>] [-t|--to <date>] [-r|--results <results>] [-s|--start <start>]
 ```
+The date format is `YYYY-MM-DD`. You can specify a datestamp using the format `YYYY-MM-DDTHH:MM:SSZ`.
+Requires a LITERAL “T” and “Z” like in ISO8601 at 
+http://www.cl.cam.ac.uk/~mgk25/iso—time.html for Example: "1984—09—01T14:21:31Z".
+If you specify a from date, no datestamp, it will expanded to `YYYY-MM-DDT00:00:00Z`. A to date will
+be expanded to `YYYY-MM-DDT23:59:59Z`.
+
+`results` is the max number of items to be retrieved. `start` is the number of items to be skipped.
+
 Examples:
 ```
 node run html5
+node run html5 -s 10
+node run html5 -s 10 -r 20
 node run infoq -f 2012-12-01
 node run nodejs -f 2012-12-01 -t 2012-12-31
 ```
@@ -30,9 +40,6 @@ You can combine tags using `+`:
 ```
 node run html5+canvas
 ```
-
-The date/time format is `YYYY-MM-DDTHH:MM:SSZ`. The short format `YYYY-MM-DD` is supported. In this case,
-the from date is expanded to `YYYY-MM-DDT00:00:00Z` and the to date is expanded to `YYYY-MM-DDT23:59:59Z`.
 
 A sample output:
 ```

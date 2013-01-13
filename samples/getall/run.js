@@ -4,6 +4,8 @@ var simpledelicious = require('../..'),
 
 simpleargs.define('f', 'from', null, 'from start of date')
     .define('t', 'to', null, 'to end of date')
+    .define('s', 'start', null, 'starting item')
+    .define('r', 'results', null, 'max item count')
     .defineValue('tag', null, 'tag');
 
 var args = simpleargs.process(process.argv);
@@ -15,6 +17,10 @@ if (args.from)
     options.fromDate = args.from;
 if (args.to)
     options.toDate = args.to;
+if (args.results)
+    options.results = args.results;
+if (args.start)
+    options.start = args.start;
 
 simpledelicious.getAll(tag, options, function (err, data) {
     if (err) {
