@@ -12,9 +12,9 @@ var tag = args.tag;
 var options = { };
 
 if (args.from)
-    options.fromDate = args.from + 'T00:00:00Z';
+    options.fromDate = args.from;
 if (args.to)
-    options.toDate = args.to + 'T23:59:59Z';
+    options.toDate = args.to;
 
 simpledelicious.getAll(tag, options, function (err, data) {
     if (err) {

@@ -31,7 +31,8 @@ You can combine tags using `+`:
 node run html5+canvas
 ```
 
-The dates should be in the format `YYYY-MM-DD`. The range includes the "to date".
+The date/time format is `YYYY-MM-DDTHH:MM:SSZ`. The short format `YYYY-MM-DD` is supported. In this case,
+the from date is expanded to `YYYY-MM-DDT00:00:00Z` and the to date is expanded to `YYYY-MM-DDT23:59:59Z`.
 
 A sample output:
 ```
