@@ -68,8 +68,8 @@ the expected data was not found.
 
 ## Samples
 
-- [Get All Links](https://github.com/ajlopez/NodeDelicious/tree/master/samples/getall): Get all links of a tag, with
-optional date range.
+- [Get All Posts](https://github.com/ajlopez/NodeDelicious/tree/master/samples/getallposts): Get all posts of a tag or
+list of tags, with optional date range.
 
 ## References
 
@@ -91,8 +91,8 @@ TBD ;-)
 
 ## Versions
 
-0.0.1: Published, 2013-01-13, with getAll.
-0.0.2: In master, under development.
+0.0.1: Published, 2013-01-13, with getAllPost.
+0.0.2: In master, under development. Added: getRecent, getDates, getTags.
 
 ## Contribution
 
