@@ -1,6 +1,6 @@
-# Get All Sample
+# Get All Posts Sample
 
-Retrieving all links of a tag, with optional date range.
+Retrieving all posts of a tag, with optional date range.
 
 ## Setup
 

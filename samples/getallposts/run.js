@@ -22,7 +22,7 @@ if (args.results)
 if (args.start)
     options.start = args.start;
 
-simpledelicious.getAll(tag, options, function (err, data) {
+simpledelicious.getAllPosts(tag, options, function (err, data) {
     if (err) {
         console.log(err);
         return;
