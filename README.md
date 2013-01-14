@@ -38,10 +38,10 @@ be expanded to `YYYY-MM-DDT23:59:59Z`.
 
 The library validates dates, before sending a request to the API endpoints.
 
-### Get All Links
+### Get All Posts
 
 ```js
-nodedelicious.getAll(tag, options, function (err, data) { ... } );
+nodedelicious.getAllPosts(tag, options, function (err, data) { ... } );
 ```
 
 `tag` is a string or a string array. It's optional.
