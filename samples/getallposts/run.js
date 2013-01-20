@@ -1,11 +1,14 @@
 
+'use strict';
+
 var simpledelicious = require('../..'),
     simpleargs = require('simpleargs');
 
-simpleargs.define('f', 'from', null, 'from start of date')
-    .define('t', 'to', null, 'to end of date')
-    .define('s', 'start', null, 'starting item')
-    .define('r', 'results', null, 'max item count')
+simpleargs.define('fd', 'from', null, 'from start of date')
+    .define('td', 'to', null, 'to end of date')
+    .define('st', 'start', null, 'starting item')
+    .define('re', 'results', null, 'max item count')
+    .define('s', 'search', null, 'tag to search')
     .defineValue('tag', null, 'tag');
 
 var args = simpleargs.process(process.argv);
@@ -22,6 +25,22 @@ if (args.results)
 if (args.start)
     options.start = args.start;
 
+function found(word, post)
+{
+/*
+    if (post.href.indexOf(word) >= 0)
+        return true;
+    if (post.description.indexOf(word) >= 0)
+        return true;
+*/
+    var tag = ' ' + post.tag + ' ';
+
+    if (tag.indexOf(' ' + word + ' ') >= 0)
+        return true;
+
+    return false;
+}
+
 simpledelicious.getAllPosts(tag, options, function (err, data) {
     if (err) {
         console.log(err);
@@ -32,6 +51,9 @@ simpledelicious.getAllPosts(tag, options, function (err, data) {
         console.log(data.result.$.code);
     else if (data.posts)
         data.posts.post.forEach(function (post) {
+            if (args.search && !found(args.search, post.$))
+                return;
+                
             console.log(post.$.description);
             console.log(post.$.href);
             console.log(post.$.tag);

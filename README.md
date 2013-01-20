@@ -44,7 +44,11 @@ The library validates dates, before sending a request to the API endpoints.
 nodedelicious.getAllPosts(tag, options, function (err, data) { ... } );
 ```
 
-`tag` is a string or a string array. It's optional.
+`tag` is a string.
+
+NOTE: if you specify a tag, only the posts with that tag in FIRST POSITION are returned. So, maybe you prefere to
+retrieve all items and them, search your tag in the returned result. See [Get All Posts](https://github.com/ajlopez/NodeDelicious/tree/master/samples/getallposts)
+sample.
 
 `options` is an optional object with properties:
 - `fromDate`: date or datestamp

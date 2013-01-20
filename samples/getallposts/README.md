@@ -18,7 +18,7 @@ with the values of your Delicious account.
 
 With the command line:
 ```
-node run <tag> [-f|--from <date>] [-t|--to <date>] [-r|--results <results>] [-s|--start <start>]
+node run <tag> [-fd|--from <date>] [-td|--to <date>] [-re|--results <results>] [-st|--start <start>]
 ```
 The date format is `YYYY-MM-DD`. You can specify a datestamp using the format `YYYY-MM-DDTHH:MM:SSZ`.
 Requires a LITERAL “T” and “Z” like in ISO8601 at 
@@ -28,13 +28,27 @@ be expanded to `YYYY-MM-DDT23:59:59Z`.
 
 `results` is the max number of items to be retrieved. `start` is the number of items to be skipped.
 
+NOTE: there is a new flag
+```
+node run [-s|--search <tag>]
+```
+Apparently, when a tag is specified, the Delicious API returns the posts WITH THAT tag as FIRST TAG. So,
+maybe you should use the `-s` options. Instead of
+```
+node run html5 -fd 2012-01-06
+```
+you should run
+```
+node run -s html5 -fd 2012-01-06
+```
+
 Examples:
 ```
 node run html5
-node run html5 -s 10
-node run html5 -s 10 -r 20
-node run infoq -f 2012-12-01
-node run nodejs -f 2012-12-01 -t 2012-12-31
+node run html5 -st 10
+node run html5 -st 10 -re 20
+node run infoq -fd 2012-12-01
+node run nodejs -fd 2012-12-01 -td 2012-12-31
 ```
 You can combine tags using `+`:
 ```
