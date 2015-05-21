@@ -96,7 +96,7 @@ TBD ;-)
 ## Versions
 
 0.0.1: Published, 2013-01-13, with getAllPost.
-0.0.2: In master, under development. Added: getRecent, getDates, getTags.
+0.0.2: Published, 2015-04-04. Added: getRecent, getDates, getTags. Fix API entry point.
 
 ## Contribution
 
