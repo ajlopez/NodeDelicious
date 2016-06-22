@@ -80,6 +80,7 @@ list of tags, with optional date range.
 - [Developing for Delicious](https://delicious.com/developers)
 - [Developer settings](https://delicious.com/settings/developer)
 - [Delicious OAuth 2.0](https://github.com/SciDevs/delicious-api/blob/master/api/oauth.md)
+- [Delicious feeds](http://del.icio.us/rss)
 
 ## API
 
